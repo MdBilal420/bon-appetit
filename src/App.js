@@ -33,6 +33,7 @@ function App() {
     <div className="App">
       <header className="App-header">
        <h1>{headingText}</h1>
+       <p style={{fontSize:"normal"}}>choose from best italian food !!!</p>
       </header>
       <div>
         <button onClick={()=>clickHandler("starters")}>🍪 Starters</button>
