@@ -1,38 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  text-align: left;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: left;
+  font-size: 1.5rem;
+  color: black;
+}
+button {
+  color: black;
+  padding: 0.5rem;
+  margin: 0.1rem;
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-block;
+  width: 50%;
+  cursor: pointer;
+  border: 1px solid black;
+  background: transparent;
+}
+
+.menu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  align-items: left;
+}
+
+.menu-item {
+  padding: 30px;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  height: 5px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cards-item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 30rem) {
+  .cards-item {
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 46rem) {
+  .cards-item {
+    width: 33.3333%;
   }
+}
+
+.card {
+  background-color: transparent;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40 px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.item-name {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.item-price {
+  color: black;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
 }
